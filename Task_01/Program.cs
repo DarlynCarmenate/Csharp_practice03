@@ -1,18 +1,14 @@
 ﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, 
-// является ли оно палиндромом.
+// является ли оно палиндромом. Решение через массив
 
-int Enter(string message) {
-    Console.WriteLine(message);
-    string numberInput = Console.ReadLine();
-    int number = int.Parse(numberInput);
-    return number;
-}
-
-int N = Enter("Введите пятизначное число");
+Console.WriteLine("Введите любое число");
+string numberInput = Console.ReadLine();
+int len = numberInput.Length;
+int N = int.Parse(numberInput);
 
 if(N < 0) N = N*(-1);
 
-int[] array = new int[5];
+int[] array = new int[len];
 int i = 0;
 int A = 0;
 
@@ -23,7 +19,6 @@ for(i = 0; i < 5; i++){
 }
 
 i = 0;
-int len = 5;
 string answer = "Полиндром";
 
 while(i < len/2){
